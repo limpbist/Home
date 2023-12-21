@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Home
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let homeViewController = HomeViewFactory.getFirstView()
+        else {return}
+        self.navigationController?.pushViewController(homeViewController, animated: true)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

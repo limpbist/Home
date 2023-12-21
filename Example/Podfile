@@ -1,13 +1,9 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '14.0'
 
 target 'Home_Example' do
   pod 'Home', :path => '../'
-
-  target 'Home_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  pod 'CoreEntities', :path => '../../CoreEntities'
+  pod 'CoreBootcamp', :path => '../../CoreBootcamp'
 end

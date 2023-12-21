@@ -28,9 +28,23 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Aaron/Home.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '14.0'
 
   s.source_files = 'Home/Classes/**/*'
+
+  s.resource_bundles = {
+    'HomeResources' => ['Home/Assets/*.png']
+  }
+
+  s.test_spec 'IntegratedTest' do |test_spec|
+    test_spec.source_files = 'Home/Tests/IntegratedTests/**/*'
+    end
+
+  s.test_spec 'UnitTests' do |test_spec|
+    test_spec.source_files = ['Home/Tests/UnitTests/**/*', 'Home/Tests/Mocks/**/*', 'Home/Tests/Spies/**/*']
+    end
+  s.dependency 'CoreEntities'
+  s.dependency 'CoreBootcamp'
   
   # s.resource_bundles = {
   #   'Home' => ['Home/Assets/*.png']

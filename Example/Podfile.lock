@@ -1,0 +1,28 @@
+PODS:
+  - CoreBootcamp (0.1.0)
+  - CoreEntities (0.1.0)
+  - Home (0.1.0):
+    - CoreBootcamp
+    - CoreEntities
+
+DEPENDENCIES:
+  - CoreBootcamp (from `../../CoreBootcamp`)
+  - CoreEntities (from `../../CoreEntities`)
+  - Home (from `../`)
+
+EXTERNAL SOURCES:
+  CoreBootcamp:
+    :path: "../../CoreBootcamp"
+  CoreEntities:
+    :path: "../../CoreEntities"
+  Home:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CoreBootcamp: 0f217d92d4dc11061cef73af14b5bd6b208051ff
+  CoreEntities: fc7b17419d9f846e2816eec35f8661737381ab21
+  Home: a1a0432c179ccaa50b1656524fe8ae94441d1112
+
+PODFILE CHECKSUM: 73bc741d3f2ca67542651aa8a37b0a5cfe2ce4a5
+
+COCOAPODS: 1.14.2
