@@ -26,7 +26,7 @@ class BookCoverRepositoryUnitTest: XCTestCase {
         let olid = "1"
         
         repository.performCoverRequest(
-            bookOLID: olid,
+            animeOLID: olid,
             completion: { result in
                 switch result {
                 case .success(let coverImage):

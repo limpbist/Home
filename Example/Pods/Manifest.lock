@@ -4,11 +4,19 @@ PODS:
   - Home (0.1.0):
     - CoreBootcamp
     - CoreEntities
+  - Home/IntegratedTest (0.1.0):
+    - CoreBootcamp
+    - CoreEntities
+  - Home/UnitTests (0.1.0):
+    - CoreBootcamp
+    - CoreEntities
 
 DEPENDENCIES:
   - CoreBootcamp (from `../../CoreBootcamp`)
   - CoreEntities (from `../../CoreEntities`)
   - Home (from `../`)
+  - Home/IntegratedTest (from `../`)
+  - Home/UnitTests (from `../`)
 
 EXTERNAL SOURCES:
   CoreBootcamp:
@@ -23,6 +31,6 @@ SPEC CHECKSUMS:
   CoreEntities: fc7b17419d9f846e2816eec35f8661737381ab21
   Home: a1a0432c179ccaa50b1656524fe8ae94441d1112
 
-PODFILE CHECKSUM: 73bc741d3f2ca67542651aa8a37b0a5cfe2ce4a5
+PODFILE CHECKSUM: 6f90444976d599a8822e2c790ba76b68ca41e78d
 
 COCOAPODS: 1.14.2

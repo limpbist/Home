@@ -16,7 +16,6 @@ class AnimeListingUseCaseUnitTest: XCTestCase {
     override func tearDown() {
     }
     
-    /*
     func testRepositoryListing() {
         let exp = expectation(description: "the use case calls the repository")
         var success: Bool = false
@@ -25,17 +24,23 @@ class AnimeListingUseCaseUnitTest: XCTestCase {
         let repository = RemoteAnimeRepository(dataSource: dataSource)
         let useCase = AnimeListingUseCase(animeRepository: repository)
         
-        useCase.execute { result in
-            switch result {
-            case .success(let domainBooksArray):
-                print(domainBooksArray)
-                success = true
-            case .failure(let error):
-                print(error)
-                success = false
+        useCase.execute(
+            topic: "naruto",
+            startDate: "2002-01-01",
+            endDate: "2010-01-01",
+            completion: {
+                result in
+                switch result {
+                case .success(let domainBooksArray):
+                    print(domainBooksArray)
+                    success = true
+                case .failure(let error):
+                    print(error)
+                    success = false
+                }
+                exp.fulfill()
             }
-            exp.fulfill()
-        }
+        )
 
         waitForExpectations(timeout: 30) { error in
             if let error = error {
@@ -44,6 +49,5 @@ class AnimeListingUseCaseUnitTest: XCTestCase {
             XCTAssertEqual(success, true)
         }
     }
-     */
 }
 

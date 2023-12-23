@@ -18,12 +18,14 @@ class AnimeBackendTest: XCTestCase {
         
     }
 
-    /*
     func testTaskEndpointCall() {
         let exp = expectation(description: "backend is returning data")
         var success: Bool = false
         
-        HomeTask.doRequest(completion: { result in
+        AnimeTask.doRequest(topic: "naruto",
+                            startDate: "2002-01-01",
+                            endDate: "2010-01-01",
+            completion: { result in
             print("result:\(result)")
             switch result {
             case .success(let animeData):
@@ -41,6 +43,6 @@ class AnimeBackendTest: XCTestCase {
             }
             XCTAssertEqual(success, true)
         }
-    }*/
+    }
 }
 

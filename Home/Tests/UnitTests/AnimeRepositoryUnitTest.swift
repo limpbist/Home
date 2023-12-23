@@ -9,7 +9,6 @@ class AnimeRepositoryUnitTest: XCTestCase {
     override func tearDown() {
     }
     
-    /*
     func testRepositoryListing() {
         let exp = expectation(description: "backend is returning data and we can obtain domain entities")
         var success: Bool = false
@@ -17,7 +16,11 @@ class AnimeRepositoryUnitTest: XCTestCase {
         let dataSource = AnimeMockDataSource()
         let repository = RemoteAnimeRepository(dataSource: dataSource)
         
-        repository.perfomListResquest(completion: { result in
+        repository.perfomListResquest(
+            topic: "naruto",
+            startDate: "2002-01-01",
+            endDate: "2010-01-01",
+            completion: { result in
             switch result {
             case .success(let domainBooksArray):
                 print(domainBooksArray)
@@ -35,5 +38,5 @@ class AnimeRepositoryUnitTest: XCTestCase {
             }
             XCTAssertEqual(success, true)
         }
-    }*/
+    }
 }

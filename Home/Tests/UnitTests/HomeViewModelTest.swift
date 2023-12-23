@@ -15,7 +15,7 @@ class HomeViewModelUnitTest: XCTestCase {
 
     override func tearDown() {
     }
-    /*
+    
     func testRequestList() {
         let dataSource = AnimeMockDataSource()
         let repository = RemoteAnimeRepository(dataSource: dataSource)
@@ -25,9 +25,11 @@ class HomeViewModelUnitTest: XCTestCase {
         let viewModelSpy = HomeViewModelDelegateSpy()
         viewModel.delegate = viewModelSpy
         
-        viewModel.requestList()
+        viewModel.requestList(topic: "naruto",
+                              startDate: "2002-01-01",
+                              endDate: "2010-01-01")
         
-        XCTAssertNotNil(viewModel.books)
+        XCTAssertNotNil(viewModel.animes)
         XCTAssertEqual(viewModelSpy.currentState, .success)
-    }*/
+    }
 }

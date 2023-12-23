@@ -15,14 +15,17 @@ class AnimeDataSourceTest: XCTestCase {
     override class func tearDown() {
     }
 
-    /*
     func testDataSourceListing() {
         let exp = expectation(description: "backend is returning data")
         var success: Bool = false
         
-        let dataSource = BooksRemoteDataSource()
+        let dataSource = AnimeRemoteDataSource()
         
-        dataSource.list(completion: {
+        dataSource.list(
+            topic: "naruto",
+            startDate: "2002-01-01",
+            endDate: "2010-01-01",
+            completion: {
             result in
             switch result {
             case.success(let animeResponseDTO):
@@ -35,7 +38,11 @@ class AnimeDataSourceTest: XCTestCase {
             
         })
         
-        HomeTask.doRequest(completion: { result in
+        AnimeTask.doRequest(
+            topic: "naruto",
+            startDate: "2002-01-01",
+            endDate: "2010-01-01",
+            completion: { result in
             switch result {
             case .success(let animeData):
                 print(animeData)
@@ -52,6 +59,6 @@ class AnimeDataSourceTest: XCTestCase {
             }
             XCTAssertEqual(success, true)
         }
-    }*/
+    }
 }
 

@@ -8,7 +8,7 @@
 
 @testable import Home
 
-class AnimeMockDataSource: BooksDataSourceProtocol {
+class AnimeMockDataSource: AnimeDataSourceProtocol {
     
     func list(
         topic: String,

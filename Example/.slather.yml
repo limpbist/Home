@@ -1,0 +1,3 @@
+xcodeproj: ./Home.xcodeproj
+scheme: Home-Example
+workspace: ./Home.xcworkspace

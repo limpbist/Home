@@ -9,7 +9,7 @@ import Foundation
 
 @testable import Home
 
-class AnimeCoverMockDataSource: BookCoverDataSourceProtocol {
+class AnimeCoverMockDataSource: AnimeCoverDataSourceProtocol {
     func imageWithColor(width: Int, height: Int) -> UIImage {
         let size = CGSize(width: width, height: height)
         return UIGraphicsImageRenderer(size: size).image { rendererContext in
@@ -18,7 +18,7 @@ class AnimeCoverMockDataSource: BookCoverDataSourceProtocol {
         }
     }
     
-    func getCover(bookOLID: String, completion: @escaping (Result<UIImage, Error>) -> Void) {
+    func getCover(animeOLID: String, completion: @escaping (Result<UIImage, Error>) -> Void) {
         let mockImage = imageWithColor(width: 50, height: 50)
         completion(.success(mockImage))
     }

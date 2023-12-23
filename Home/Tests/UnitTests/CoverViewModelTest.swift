@@ -27,7 +27,7 @@ class CoverViewModelTest: XCTestCase {
         
         let olid = "OL25565731M"
         
-        viewModel.getCover(bookOLID: olid)
+        viewModel.getCover(animeOLID: olid)
         
         XCTAssertNotNil(viewModel.coverImage)
         XCTAssertEqual(viewModelSpy.currentState, .success)
